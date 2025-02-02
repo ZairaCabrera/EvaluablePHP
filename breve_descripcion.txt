@@ -1,0 +1,13 @@
+Resumen del Proyecto:
+El Portal de Eventos Municipales es una aplicación web desarrollada en PHP siguiendo el patrón de diseño Modelo-Vista-Controlador (MVC). La aplicación permite a los usuarios explorar, buscar y reservar eventos organizados por el municipio, además de gestionar su perfil y autenticarse en el sistema.
+Funcionalidades principales:
+Registro e inicio de sesión:
+Los usuarios se registran con datos personales y contraseñas encriptadas (password_hash) y pueden iniciar sesión, donde se verifica la contraseña con password_verify, asignándoles nivel 1.
+Gestión de eventos:
+Se listan, buscan (por nombre o cantante) y se muestran en detalle los eventos, incluyendo imágenes, fechas y artistas.
+Reservas:
+Los usuarios registrados pueden reservar eventos, y pueden consultar sus reservas en una vista dedicada.
+Menús dinámicos:
+El sistema muestra menús distintos según el nivel de usuario (invitado, usuario o administrador).
+
+Esta aplicación destaca por su seguridad (encriptación de contraseñas, manejo de errores y logs) y su clara separación de responsabilidades gracias al patrón MVC.
