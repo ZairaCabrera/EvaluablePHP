@@ -4,7 +4,7 @@ require_once __DIR__ . '/../app/libs/Config.php';
 require_once __DIR__ . '/../app/libs/bGeneral.php';
 require_once __DIR__ . '/../app/libs/bSeguridad.php';
 require_once __DIR__ . '/../app/modelo/classModelo.php';
-require_once __DIR__ . '/../app/modelo/classBiblioteca.php';
+require_once __DIR__ . '/../app/modelo/classEventos.php';
 require_once __DIR__ . '/../app/controlador/Controller.php';
 //iniciamos sesión
 session_start(); 
@@ -26,8 +26,9 @@ $map = array(
     'iniciarSesion' => array('controller' => 'Controller', 'action' => 'iniciarSesion', 'nivel_usuario' => 0),
     'registro' => array('controller' => 'Controller', 'action' => 'registro', 'nivel_usuario' => 0),
     'ListarEventos' => array('controller' => 'Controller', 'action' => 'ListarEventos', 'nivel_usuario' => 0),
-    'EventosFavoritos' => array('controller' => 'Controller', 'action' => 'EventosFavoritos', 'nivel_usuario' => 1),
+    'BuscarPorNombre' => array('controller' => 'Controller', 'action' => 'BuscarPorNombre', 'nivel_usuario' => 1),
     'BuscarPorCantante' => array('controller' => 'Controller', 'action' => 'BuscarPorCantante', 'nivel_usuario' => 0),
+    'verEvento' => array('controller' => 'Controller', 'action' => 'verEvento', 'nivel_usuario' => 0),
     'ModificarPerfil' => array('controller' => 'Controller', 'action' => 'ModificarPerfil', 'nivel_usuario' => 1),
     'MisReservas' => array('controller' => 'Controller', 'action' => 'MisReservas', 'nivel_usuario' => 1),
     'EventosSemana' => array('controller' => 'Controller', 'action' => 'EventosSemana', 'nivel_usuario' => 0),
