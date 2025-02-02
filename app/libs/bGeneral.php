@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /****
  * Librería con funciones generales y de validación
@@ -205,7 +205,19 @@ if (count($arrayfecha)==3){
 }
 
 
+function cCorreo(string $correo, string $campo, array &$errores, bool $requerido = TRUE){
+    if($requerido === true && $correo === ""){
+        $errores[$campo]="Campo $campo requerido";
+        return false;
+    }
 
+    if (preg_match('/^[a-zñ0-9._%+-]+@[a-zñ]+\.[a-zñ]{2,}$/i', $correo)){
+        return true;
+    } else {
+        $errores[$campo]="Campo $campo no es correcto";
+        return false;
+    }
+}
 
 
 
